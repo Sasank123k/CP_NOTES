@@ -57,31 +57,7 @@ vector<long long> substringHash(long long int l, long long int r,vector<vector<l
         return hash;
     }
 int main() {
-    string s1 = "abcdabcd";
-    string s2 = "ab";
-    cin>>s1>>s2;
-    vector<vector<long long int >> powerOfBase=powers_of_base(s1);
-    vector<vector<long long int>> hashValues1=Hash_prefixes(s1,powerOfBase);
-    long long int n=s2.length();
-    long long int m=s1.length();
-    int chk=0;
-    if(n>m){
-        chk=1;
-    }
-    vector<vector<long long int>> hashValues2=Hash_prefixes(s2,powerOfBase);
-    int ans=0;
-    if(chk==0){
-
-        for(int i=0;i<s1.length()-n+1;i++){
-        vector<long long> hash_s1=substringHash(i,i+n-1,hashValues1,powerOfBase);
-        vector<long long> hash_s2=substringHash(0,n-1,hashValues2,powerOfBase);
-        
-        if(hash_s1[0]==hash_s2[0] && hash_s1[1]==hash_s2[1]){
-            ans++;
-        }
-        }
-    }
-        cout<<ans<<endl;
+    
     
     
     return 0;
